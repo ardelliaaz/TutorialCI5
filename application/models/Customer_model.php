@@ -35,7 +35,7 @@ class Customer_model extends CI_Model
     public function save()
     {
         $post = $this->input->post();
-        $this->customer_id = $post("id");
+        $this->customer_id = uniqid();
         $this->name = $post["name"];
         $this->address = $post["address"];
       
