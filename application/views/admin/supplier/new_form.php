@@ -26,16 +26,16 @@
 
 				<div class="card mb-3">
 					<div class="card-header">
-						<a href="<?php echo site_url('admin/customer/') ?>"><i class="fas fa-arrow-left"></i> Back</a>
+						<a href="<?php echo site_url('admin/supplier/') ?>"><i class="fas fa-arrow-left"></i> Back</a>
 					</div>
 					<div class="card-body">
 
-						<form action="<?php base_url('admin/customer/add') ?>" method="post" enctype="multipart/form-data" >
+						<form action="<?php base_url('admin/supplier/add') ?>" method="post" enctype="multipart/form-data" >
 
 							<div class="form-group">
 								<label for="name">Id*</label>
 								<input class="form-control <?php echo form_error('id') ? 'is-invalid':'' ?>"
-								 type="text" name="id" placeholder="Customer id" />
+								 type="text" name="id" placeholder="supplier id" />
 								<div class="invalid-feedback">
 									<?php echo form_error('id') ?>
 								</div>
@@ -45,7 +45,7 @@
 							<div class="form-group">
 								<label for="name">Name*</label>
 								<input class="form-control <?php echo form_error('name') ? 'is-invalid':'' ?>"
-								 type="text" name="name" placeholder="Customer name" />
+								 type="text" name="name" placeholder="supplier name" />
 								<div class="invalid-feedback">
 									<?php echo form_error('name') ?>
 								</div>
@@ -54,7 +54,7 @@
 							<div class="form-group">
 								<label for="name">Address*</label>
 								<textarea class="form-control <?php echo form_error('address') ? 'is-invalid':'' ?>"
-								 name="address" placeholder="Customer address..."></textarea>
+								 name="address" placeholder="supplier address..."></textarea>
 								<div class="invalid-feedback">
 									<?php echo form_error('address') ?>
 								</div>

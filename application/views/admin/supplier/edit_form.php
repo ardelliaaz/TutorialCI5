@@ -24,41 +24,42 @@
 				</div>
 				<?php endif; ?>
 
+				<!-- Card  -->
 				<div class="card mb-3">
 					<div class="card-header">
-						<a href="<?php echo site_url('admin/customer/') ?>"><i class="fas fa-arrow-left"></i> Back</a>
+
+						<a href="<?php echo site_url('admin/supplier/') ?>"><i class="fas fa-arrow-left"></i>
+							Back</a>
 					</div>
 					<div class="card-body">
 
-						<form action="<?php base_url('admin/customer/add') ?>" method="post" enctype="multipart/form-data" >
+						<form action="<?php base_url(" admin/supplier/edit") ?>" method="post"
+							enctype="multipart/form-data" >
 
-							<div class="form-group">
-								<label for="name">Id*</label>
-								<input class="form-control <?php echo form_error('id') ? 'is-invalid':'' ?>"
-								 type="text" name="id" placeholder="Customer id" />
-								<div class="invalid-feedback">
-									<?php echo form_error('id') ?>
-								</div>
-							</div>
-
+							<input type="hidden" name="id" value="<?php echo $supplier->supplier_id?>" />
 
 							<div class="form-group">
 								<label for="name">Name*</label>
 								<input class="form-control <?php echo form_error('name') ? 'is-invalid':'' ?>"
-								 type="text" name="name" placeholder="Customer name" />
+								 type="text" name="name" placeholder="supplier name" value="<?php echo $supplier->supplier_name ?>" />
 								<div class="invalid-feedback">
 									<?php echo form_error('name') ?>
 								</div>
 							</div>
 
 							<div class="form-group">
-								<label for="name">Address*</label>
-								<textarea class="form-control <?php echo form_error('address') ? 'is-invalid':'' ?>"
-								 name="address" placeholder="Customer address..."></textarea>
+								<label for="address">Address</label>
+								<input class="form-control <?php echo form_error('address') ? 'is-invalid':'' ?>"
+								 type="text" name="address" min="0" placeholder="supplier address" value="<?php echo $supplier->supplier_address ?>" />
 								<div class="invalid-feedback">
 									<?php echo form_error('address') ?>
 								</div>
 							</div>
+
+
+						
+
+							
 
 							<input class="btn btn-success" type="submit" name="btn" value="Save" />
 						</form>
@@ -81,7 +82,6 @@
 
 		</div>
 		<!-- /#wrapper -->
-
 
 		<?php $this->load->view("admin/_partials/scrolltop.php") ?>
 
